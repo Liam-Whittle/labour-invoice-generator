@@ -5,7 +5,7 @@
 - View a simplified preview of any invoice.
 - Share generated invoices via supported native mobile share functionality.
 
-(all invoices are saved locally as a csv formatted file.)
+( all invoices are saved locally as a csv formatted file. )
 
 ## Android Demo
 <img align="left" src="https://user-images.githubusercontent.com/60028961/209335619-2a653fee-fab8-414a-b2b7-6d31632501e7.jpg" width="240">
