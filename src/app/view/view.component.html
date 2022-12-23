@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Invoice Preview</ion-title>
+    <ion-buttons slot="end">
+      <ion-button shape="round" color="dark" (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-grid class="ion-margin" style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: self-end;
+    flex-direction: column;
+    font-size: 13.3px;
+    font-weight: 500;
+">
+      <ion-row style="color: black; margin-bottom: 4px;" row-auto *ngFor="let row of showPreview; index as i">
+        <ion-col size="auto" style="color: black; margin-right: 4.2px;" col-auto *ngFor="let col of row; index as j">{{ showPreview[i][j] }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ng-container *ngIf="hasAccount; else send">
+    <ion-button style="margin-left: 25px; margin-right: 25px; margin-top: 15px; border-radius: 20px;" expand="block" color="dark"
+      (click)="checkAccount()">
+      <ion-label>Setup Email &nbsp;</ion-label>
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-button>
+  </ng-container>
+
+  <ng-template #send>
+    <ion-button style="margin-left: 25px; margin-right: 25px; margin-top: 15px; border-radius: 20px;" expand="block" color="dark"
+      (click)="sendInvoiceCSV()">
+      <ion-label>Share &nbsp;</ion-label>
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-button>
+  </ng-template>
+
+</ion-content>

@@ -1,0 +1,13 @@
+INVOICE:,Name,,,,DATE:,Datenum
+,,,,,,
+,,,,,,
+DAYS WORKED,,,,HOURS,RATE,AMOUNT
+Day,Times,,,Hournum,Ratenum,Amountnum
+Day,Times,,,Hournum,Ratenum,Amountnum
+,,,,,,
+,,,,,,
+,,,,,SUBTOTAL,Beforetaxnum
+,,,,,TAX RATE,-Taxratenum%
+,,,,,TAX,-Taxnum
+,,,,,,
+,,,,,TOTAL,Totalnum
